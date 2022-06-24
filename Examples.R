@@ -31,7 +31,7 @@ lpvs <- sample_dirichlet(nNode,alpha)
 # generate a random graph according to the random dot product graph model
 g <- sample_dot_product(lpvs) 
 
-# construct a simplicial complex of dimension 2
+# construct a simplicial complex of dimension 2 on top of g
 zeroSimplx=as.list(V(g))
 oneSimplx=data.frame(t(as_edgelist(g)))
 twoSimplx=data.frame(matrix(triangles(g),nrow = 3))
